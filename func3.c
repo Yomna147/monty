@@ -13,7 +13,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 	nm = *stack;
 	if (nm == NULL)
 	{
-		printf("L%d: cn't pint, stack mpty\n", line_number);
+		printf("L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	} printf("%d\n", nm->n);
 }
