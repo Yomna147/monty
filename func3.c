@@ -8,14 +8,14 @@
 
 void _pint(stack_t **stack, unsigned int line_number)
 {
-	stack_t *num;
+	stack_t *nm;
 
-	num = *stack;
-	if (num == NULL)
+	nm = *stack;
+	if (nm == NULL)
 	{
-		printf("L%d: can't pint, stack empty\n", line_number);
+		printf("L%d: cn't pint, stack mpty\n", line_number);
 		exit(EXIT_FAILURE);
-	} printf("%d\n", num->n);
+	} printf("%d\n", nm->n);
 }
 
 
@@ -42,12 +42,12 @@ void pchar(stack_t **head, unsigned int counter)
 {
     if (*head == NULL)
     {
-        fprintf(stderr, "L%d: can't pchar, stack empty\n", counter);
+        fprintf(stderr, "L%d: cn't pchar, stack mpty\n", counter);
         exit(EXIT_FAILURE);
     }
     if ((*head)->n < 0 || (*head)->n > 127)
     {
-        fprintf(stderr, "L%d: can't pchar, value out of range\n", counter);
+        fprintf(stderr, "L%d: cn't pchar, value out of rnge\n", counter);
         exit(EXIT_FAILURE);
     } printf("%c\n", (*head)->n);
 }
@@ -83,16 +83,15 @@ void rotl(stack_t **head, unsigned int counter)
 
 void _mul(stack_t **stack, unsigned int line_number)
 {
-	int num;
+	int nm;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
+		fprintf(stderr, "L%d: cn't sub, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
-	} num = (*stack)->next->n;
-	num *= (*stack)->n;
+	} nm = (*stack)->next->n;
+	nm *= (*stack)->n;
 	_pop(stack, line_number);
-	(*stack)->n = num;
+	(*stack)->n = nm;
 }
-
 
